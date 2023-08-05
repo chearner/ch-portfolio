@@ -1,0 +1,6 @@
+{
+    "notebook.output.wordWrap": true,
+    "editor.wordWrapColumn": 120,
+    "workbench.editor.wrapTabs": true,
+    "prettier.useTabs": true
+}
