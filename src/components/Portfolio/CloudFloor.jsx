@@ -1,5 +1,3 @@
-import { forwardRef, useEffect, useContext, useRef, useState } from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
 import { Cloud, Preload } from '@react-three/drei';
 import { OrbitControls, PerspectiveCamera, Float } from '@react-three/drei';
 import * as THREE from 'three';
