@@ -44,6 +44,7 @@ export const Contact = () => {
         w={'full'}
         rounded={'xl'}
         boxShadow={'lg'}
+        backgroundColor={'#161b22'}
         p={6}
         my={12}
       >
