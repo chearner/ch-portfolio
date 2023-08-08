@@ -20,26 +20,45 @@ export const theme = extendTheme({
   styles: {
     global: {
       'html, body': {
-        fontFamily: 'FamiljenGrotesk',
+        fontFamily: 'SoehneBuch',
         color: '#ffffff',
         bg: '#000000',
       },
-      'main': {
+      main: {
+        fontFamily: 'SoehneBuch',
         color: '#ffffff',
         bg: '#000000',
         //bgGradient:
           //'radial-gradient(circle at bottom, #ff36a3, transparent 90%), linear-gradient(to top, #005A9C 0%, transparent 70%), linear-gradient(to bottom, transparent, rgba(255,255,255, 0.4) 70%), #1e90ff',
         //animation: `${ gradientAnimationKeyframes } 30s infinite`,
       },
-      'footer': {
+      footer: {
         color: '#ffffff',
         bg: '#000000',
+      },
+      '.hidden': {
+        opacity: '0',
+        filter: 'blur(5px)',
+        transition: 'all 1s',
+      },
+      '.show': {
+        opacity: '1',
+        filter: 'blur(0)',
+        transition: 'all 1s',
+      },
+      '.scrollToTop': {
+        position: 'sticky',
+        zIndex: '9999',
+        cursor: 'pointer',
+        bottom: '25px',
+        right: '25px',
+        float: 'right',
       },
     },
   },
   fonts: {
-    body: `FamiljenGrotesk, ${base.fonts?.body}`,
-    heading: `FamiljenGrotesk, ${base.fonts?.heading}`,
+    body: `SoehneBuch, ${base.fonts?.body}`,
+    heading: `SoehneFett, ${base.fonts?.heading}`,
     logo: 'Bayon',
   },
   textStyles: {

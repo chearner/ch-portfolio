@@ -4,18 +4,12 @@ import { extend, useFrame } from '@react-three/fiber';
 
 extend({ ShaderPass })
 
-type DistortionPassType = {
-	enabled?: boolean
-	progress?: number
-	scale?: number
-}
-
-export const DistortionPass: VFC<DistortionPassType> = props => {
+export const DistortionPass = props => {
 	const { enabled = true, progress = 0, scale = 1 } = props
 
 	const distortionRef = useRef<ShaderPass>(null)
 
-	const shader: THREE.Shader = useMemo(() => {
+	const shader = useMemo(() => {
 		return {
 			uniforms: {
 				tDiffuse: { value: null },
@@ -29,7 +23,7 @@ export const DistortionPass: VFC<DistortionPassType> = props => {
 	}, [])
 
 	useFrame(() => {
-		distortionRef.current!.uniforms.u_time.value += 0.01
+		distortionRef.current.uniforms.u_time.value += 0.01
 	})
 
 	return (
